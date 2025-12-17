@@ -75,7 +75,7 @@ fit.function = function(item_assignment, # a vector of item assignments as detai
                         nu_min = 10^(-4), # threshold value, if the nu value of any fit criterion is below this threshold, nu
                         # will be returned as zero to prevent BSO from optimizing a subset of the fit criteria while neglecting
                         # one criterion completely
-                        
+                        max_nest_fac,
                         verbose = FALSE, # return information in console
                         return_fit = FALSE, # return fit object for debugging
                         debug_fit_mode = FALSE, # option to pass through error messages and warnings to help debugging the fit function
@@ -426,7 +426,7 @@ fit.function = function(item_assignment, # a vector of item assignments as detai
       }
     ),
     error = function(e) {
-# If the user requested an unsupported fit criterion, rethrow the error (do not mask it as a model-fitting failure).
+      # handle error if fit cirterion isn´t included
       if (grepl("Error: The fit criterion", e$message)) {
         stop(e)  # rethrow the error – so that it isn´t catched by the trycatch
       }

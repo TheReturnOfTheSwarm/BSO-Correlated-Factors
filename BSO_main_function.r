@@ -540,6 +540,7 @@ BSO = function(item_names,      # Vector of item names to be analyzed
                               nu_min = nu_min,
                               debug_fit_mode = debug_fit_mode,
 							  ignore_warnings = ignore_warnings,
+							  max_nest_fac = max_nest_fac,
                               ...) #evaluate model
           
           
@@ -618,6 +619,7 @@ BSO = function(item_names,      # Vector of item names to be analyzed
                               nu_min = nu_min,
                               debug_fit_mode = debug_fit_mode,
 							  ignore_warnings = ignore_warnings,
+							  max_nest_fac = max_nest_fac,
                               ...
                               ) #evaluate model
           

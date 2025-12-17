@@ -120,6 +120,7 @@ initialize.bees <- function(item_names, # a vector of item names (length must eq
                       nu_min = nu_min,
                       debug_fit_mode = debug_fit_mode,
 					  ignore_warnings = ignore_warnings,
+					  max_nest_fac = max_nest_fac,
                       ...) #evaluate model
   
   # save items - factor allocation, seed, iteration, number of factors, "age" and quality in solution object
@@ -441,6 +442,7 @@ initialize.scout.nest.bees <- function(item_names,
                        nu_min = nu_min,
                        debug_fit_mode = debug_fit_mode,
 					   ignore_warnings = ignore_warnings,
+					   max_nest_fac = max_nest_fac,
                        ...)
     
     # Create solution vector - ensure all numeric types and consistent metadata
